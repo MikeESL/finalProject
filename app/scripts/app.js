@@ -21,6 +21,11 @@ angular.module('finalProjectApp', [
         templateUrl: 'views/login.html',
         controller: 'LoginController'
       })
+      .when('/test', {
+        authRequired: true, // if true, must log in before viewing this page
+        templateUrl: 'views/test.html',
+        controller: 'LoginController'
+      })
       .otherwise({
         redirectTo: '/'
       });
