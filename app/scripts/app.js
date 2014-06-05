@@ -21,7 +21,15 @@ angular.module('finalProjectApp', [
         templateUrl: 'views/login.html',
         controller: 'LoginController'
       })
-      .when('/test', {
+      .when('/create', {
+        authRequired: true, // if true, must log in before viewing this page
+        templateUrl: 'views/create.html',
+        //controller: 'PostController'
+      }).when('/list', {
+        authRequired: false, // if true, must log in before viewing this page
+        templateUrl: 'views/test.html',
+        controller: 'PostController'
+      }).when('/test', {
         authRequired: true, // if true, must log in before viewing this page
         templateUrl: 'views/test.html',
         controller: 'LoginController'
