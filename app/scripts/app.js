@@ -24,11 +24,11 @@ angular.module('finalProjectApp', [
       .when('/create', {
         authRequired: true, // if true, must log in before viewing this page
         templateUrl: 'views/create.html',
-        //controller: 'PostController'
+        //controller: 'CreateGhostCtrl',
       }).when('/list', {
         authRequired: false, // if true, must log in before viewing this page
-        templateUrl: 'views/test.html',
-        controller: 'PostController'
+        templateUrl: 'views/list.html',
+        //controller: 'CreateGhostCtrl',
       }).when('/test', {
         authRequired: true, // if true, must log in before viewing this page
         templateUrl: 'views/test.html',

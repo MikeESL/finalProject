@@ -1,14 +1,3 @@
-<!-- <div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
-    <li ng-cloak ng-show-auth="login" ng-controller="LoginController"><a href="#" ng-click="logout()">Log Out</a></li>
-    <li ng-cloak ng-show-auth="['logout','error']"><a href="#/login">Log In</a></li>
-  </ul>
-  <h3 class="text-muted">finalProject</h3>
-</div> -->
-
 <div class="container">
     <nav role="navigation" class="navbar navbar-inverse">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -24,9 +13,9 @@
         <!-- Collection of nav links, forms, and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a ng-href="#">Home</a></li>
+                <li><a ng-href="#">Home</a></li>
                 <li><a ng-href="#/create">Create</a></li>
-                <li><a ng-href="#/list">View Stories</a></li>
+                <li class="active"><a ng-href="#/list">View Stories</a></li>
                 <li><a ng-href="#">About</a></li>
             </ul>
             <form role="search" class="navbar-form navbar-left">
@@ -41,6 +30,18 @@
         </div>
     </nav>
 </div>
+<!-- end nav / search -->
+
+<h4>{{ghost.location | uppercase}}</h4> 
+        <img ng-src="{{ghost.img1}}"></img>
+        <h5>{{ghost.date}}</h5>
+
+
+        <div ng-controller="CollapseDemoCtrl">
+  <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">View More!</button>
+  <hr>
+  <div collapse="isCollapsed">
+    <div class="well well-lg">
 
 
 
@@ -48,30 +49,12 @@
 
 
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
-</div>
-"#/login"
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+    </div>
+  </div>
+</div>    
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
 
-<div class="footer">
-  <p>♥ from the Yeoman team</p>
-</div>
+
+
+
