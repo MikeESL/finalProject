@@ -35,3 +35,4 @@ angular.module('finalProjectApp', [
         redirectTo: '/'
       });
   });
+  //.constant( 'FIREBASE_URI', 'https://ghostapp.firebaseio.com')

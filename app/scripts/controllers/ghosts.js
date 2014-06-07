@@ -9,8 +9,8 @@ angular.module('finalProjectApp')
     	$location.path('/list');
     };
 
-    $scope.removePost = function(postId) {
-    	GhostService.removePost(postId);
+    $scope.removePost = function(ghostId) {
+    	GhostService.removePost(ghostId);
     };
   
   }]);

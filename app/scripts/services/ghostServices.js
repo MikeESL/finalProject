@@ -1,7 +1,7 @@
 'use strict'
 angular.module('finalProjectApp')
-		.factory('GhostService', ['$firebase', 'FIREBASE_URI', function($firebase, FIREBASE_URI){
-				var ref = new Firebase(FIREBASE_URI);
+		.factory('GhostService', ['$firebase', 'FBURL', function($firebase, FBURL){
+				var ref = new Firebase(FBURL);
 				var ghostPosts = $firebase(ref);
 				var getPosts = function(){
 							return ghostPosts;
@@ -21,7 +21,7 @@ angular.module('finalProjectApp')
 						removePost: removePost
 //						updatePost: updatePost
 				}
-				
+
 }]);
 						
 							
