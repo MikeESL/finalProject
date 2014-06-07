@@ -1,12 +1,16 @@
-'use strict'
+'use strict';
+
 angular.module('finalProjectApp')
-	.controller('CreateGhostCtrl', function($scope, $location, CreateService){
-			$scope.create=function(){
-					$location.path('/create');
-			};
-			$scope.newGhost = function(bauble){
-					CreateService.create(ghost)
-					$location.path('/list')
-			}
-			$scope.ghost = CreateService.query();
-	})
+  .controller('GhostCtrl',['$scope', '$location', 'GhostService', function ($scope, $location, GhostService) {
+    $scope.ghost = GhostService.getPosts();
+
+    $scope.addPost = function() {
+    	GhostService.newPost($scope.newPost);
+    	$location.path('/list');
+    };
+
+    $scope.removePost = function(ghostId) {
+    	GhostService.removePost(ghostId);
+    };
+  
+  }]);

@@ -25,19 +25,20 @@
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a ng-href="#">Home</a></li>
-                <li><a ng-href="#/create">Create</a></li>
+                <li><a ng-href="#/create">Create a Story</a></li>
                 <li><a ng-href="#/list">View Stories</a></li>
                 <li><a ng-href="#">About</a></li>
             </ul>
-            <form role="search" class="navbar-form navbar-left">
+            <ul class="nav navbar-nav">
+                <li ng-cloak ng-show-auth="login" ng-controller="LoginController"><a ng-href="#" ng-click="logout()">Log Out</a></li>
+                <li ng-cloak ng-show-auth="['logout','error']"><a ng-href="#/login">Log In</a></li>
+            </ul>
+            <form role="search" class="navbar-form navbar-right">
                 <div class="form-group">
                     <input type="text" placeholder="Search by City Name" class="form-control">
                 </div>
             </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li ng-cloak ng-show-auth="login" ng-controller="LoginController"><a ng-href="#" ng-click="logout()">Log Out</a></li>
-    <li ng-cloak ng-show-auth="['logout','error']"><a ng-href="#/login">Log In</a></li>
-            </ul>
+            
         </div>
     </nav>
 </div>
