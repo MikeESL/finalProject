@@ -24,15 +24,12 @@ angular.module('finalProjectApp', [
       .when('/create', {
         authRequired: true, // if true, must log in before viewing this page
         templateUrl: 'views/create.html',
-        //controller: 'CreateGhostCtrl',
-      }).when('/list', {
+        controller: 'GhostCtrl',
+      })
+      .when('/list', {
         authRequired: false, // if true, must log in before viewing this page
         templateUrl: 'views/list.html',
-        //controller: 'CreateGhostCtrl',
-      }).when('/test', {
-        authRequired: true, // if true, must log in before viewing this page
-        templateUrl: 'views/test.html',
-        controller: 'LoginController'
+        controller: 'GhostCtrl',
       })
       .otherwise({
         redirectTo: '/'

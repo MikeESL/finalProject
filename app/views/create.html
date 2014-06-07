@@ -16,36 +16,61 @@
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a ng-href="#/">Home</a></li>
-                <li class="active"><a ng-href="#/create">Create</a></li>
+                <li class="active"><a ng-href="#/create">Create a Story</a></li>
                 <li><a ng-href="#/list">View Stories</a></li>
                 <li><a ng-href="#">About</a></li>
             </ul>
-            <form role="search" class="navbar-form navbar-left">
+            <ul class="nav navbar-nav">
+                <li ng-cloak ng-show-auth="login" ng-controller="LoginController"><a href="#" ng-click="logout()">Log Out</a></li>
+                <li ng-cloak ng-show-auth="['logout','error']"><a href="#/login">Log In</a></li>
+            </ul>
+            <form role="search" class="navbar-form navbar-right">
                 <div class="form-group">
                     <input type="text" placeholder="Search by City Name" class="form-control">
                 </div>
             </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li ng-cloak ng-show-auth="login" ng-controller="LoginController"><a href="#" ng-click="logout()">Log Out</a></li>
-    <li ng-cloak ng-show-auth="['logout','error']"><a href="#/login">Log In</a></li>
-            </ul>
+            
         </div>
     </nav>
 </div>
 
 <!-- end navigation with search bar  -->
-<!-- begin inputs to create experience -->
-
+<!-- begin inputs to create experience/post -->
+<h3>Create a New Ghost Experience</h3>
 <div class="row">
-		<div class="col-lg-12">
-			<input type="file">
-			<input type="text" placeholder="add item name" data-ng-model="bauble.name">
-			<input type="url" placeholder="add image" popover="add the path to your bauble here!"  popover-trigger="focus" data-ng-model="bauble.img1">
-			<input type="url" placeholder="add image" popover="add the path to your bauble here!"  popover-trigger="focus"data-ng-model="bauble.img2">
-			<input type="url" placeholder="add image" popover="add the path to your bauble here!"  popover-trigger="focus"data-ng-model="bauble.img3">
-			<textarea placeholder="add description" cols="35" rows="2" data-ng-model="bauble.description"></textarea>
-			<input type="number" placeholder="add item price" popover="just enter numbers; no $ required!"  popover-trigger="focus" data-ng-model="bauble.price">
-			<button data-ng-click="newBauble(bauble)">Add Item</button>
+		<div>
+				<form role="form" novalidate ng-submit="addPost()">
+					<div class="photoUpload">
+							<p>Upload a photo</p>
+							<input type="file" ng-model="ghost.photo">
+					</div>
+					<div class="allInputs">
+						<div class="inputs">
+							<p>Where did this happen?</p>
+							<input type="text" placeholder="add city" ng-model="ghost.location">
+						</div>
+						<div class="inputs">
+							<p>When did this happen?</p>
+							<input type="text" placeholder="add apprx time" ng-model="ghost.time">
+						</div>
+						<div class="inputs">
+							<p>How many people witnessed this?</p>
+							<input type="number" placeholder="just you (1), or others?" ng-model="ghost.number">
+						</div>
+						<div class="inputs">
+							<p>How scared were you?</p>
+							<input type="text" placeholder="How scary?" ng-model="ghost.scared">
+						</div>
+						<div class="inputs">
+							<p>Add a brief description of what happened (limited to 500 characters)</p>
+							<textarea placeholder="brief description" cols="35" rows="2" ng-model="ghost.description"></textarea>
+						</div>
+							
+					</div>
+					<div class="inputs">
+							<button type="submit">Submit Your Experience</button>
+					</div>
+				</form>
 		</div>
 
 	</div>
