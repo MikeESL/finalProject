@@ -34,7 +34,7 @@
 <!-- begin listing of ghost posts -->
 <div ng-repeat="(index, ghost) in ghosts">
 
-        <h4>{{ghost.date | uppercase}}</h4> 
+        <h4>{{ghost.date | date}}</h4> 
         <img ng-src="{{ghost.photo}}"></img>
         <h6>{{ghost.location | uppercase}}</h6>
 

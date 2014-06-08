@@ -36,7 +36,9 @@
 
 <!-- end navigation with search bar  -->
 <!-- begin inputs to create experience/post -->
-<h3>Create a New Ghost Experience</h3>
+<div class="headline">
+	<h1>Create a New Ghost Experience</h1>
+</div>
 <div class="row">
 		<div>
 
@@ -54,7 +56,7 @@
 						<div class="inputs" ng-controller="DatepickerDemoCtrl">
 							<p>When did this happen?</p>
 							<p class="input-group">
-							<input placeholder="add date" type="text" class="form-control" datepicker-popup="" ng-model="newPost.date" is-open="opened" min-date="1900-01-01" max-date="'2015-06-22'" datepicker-options="dateOptions"  close-text="Close" />
+							<input placeholder="add date" type="text" class="form-control" datepicker-popup="shortDate" ng-model="newPost.date" is-open="opened" min-date="1900-01-01" max-date="'2015-06-22'" datepicker-options="dateOptions"  close-text="Close" />
 				              <span class="input-group-btn">
 				                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
 				              </span>
@@ -71,7 +73,7 @@
 						</div>
 						<div class="inputs">
 							<p>Add a brief description of what happened (limited to 500 characters)</p>
-							<textarea class="form-control" placeholder="brief description" cols="35" rows="2" ng-model="newPost.description"></textarea>
+							<textarea class="form-control" placeholder="brief description" maxlength="500"cols="35" rows="2" ng-model="newPost.description"></textarea>
 						</div>
 							
 					</div>
