@@ -39,38 +39,41 @@
 <h3>Create a New Ghost Experience</h3>
 <div class="row">
 		<div>
+
 				<form class="form-inline" role="form" novalidate ng-submit="addPost()">
+				  <div class="form-group">	
 					<div class="photoUpload">
 							<p>Upload a photo</p>
-							<input type="file" ng-model="ghost.photo">
+							<input class="form-control" type="file" ng-model="newPost.photo">
 					</div>
 					<div class="allInputs">
 						<div class="inputs">
 							<p>Where did this happen?</p>
-							<input type="text" placeholder="add city" ng-model="ghost.location">
+							<input class="form-control" type="text" placeholder="add city" ng-model="newPost.location">
 						</div>
 						<div class="inputs">
 							<p>When did this happen?</p>
-							<input type="number" placeholder="add apprx time" ng-model="ghost.time">
+							<input class="form-control" type="number" placeholder="add apprx time" ng-model="newPost.time">
 						</div>
 						<div class="inputs">
 							<p>How many people witnessed this?</p>
-							<input type="number" placeholder="just you (1), or others?" ng-model="ghost.number">
+							<input class="form-control"type="number" placeholder="just you (1), or others?" ng-model="newPost.number">
 						</div>
 						<div class="inputs">
 							<p>How scared were you?</p>
-							<input type="text" placeholder="How scary?" ng-model="ghost.scared">
+							<input class="form-control" type="text" placeholder="How scary?" ng-model="newPost.scared">
 						</div>
 						<div class="inputs">
 							<p>Add a brief description of what happened (limited to 500 characters)</p>
-							<textarea placeholder="brief description" cols="35" rows="2" ng-model="ghost.description"></textarea>
+							<textarea class="form-control" placeholder="brief description" cols="35" rows="2" ng-model="newPost.description"></textarea>
 						</div>
 							
 					</div>
-					<div class="inputs">
+				  </div>	
+				  <div class="inputs">
 							<button type="submit">Submit Your Experience</button>
 					</div>
 				</form>
 		</div>
 
-	</div>
+</div>

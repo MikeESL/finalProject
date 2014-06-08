@@ -32,7 +32,7 @@
 </div>
 <!-- end nav / search -->
 <!-- begin listing of ghost posts -->
-
+<div ng-repeat="(index, ghost) in ghosts">
 
         <h4>{{ghost.location | uppercase}}</h4> 
         <img ng-src="{{ghost.photo}}"></img>
@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>    
-
+</div>
 
 
 
