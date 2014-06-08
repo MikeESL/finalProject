@@ -32,11 +32,11 @@
 </div>
 <!-- end nav / search -->
 <!-- begin listing of ghost posts -->
-
+<div data-ng-repeat="ghost in ghosts">
 
         <h4>{{ghost.location | uppercase}}</h4> 
         <img ng-src="{{ghost.photo}}"></img>
-        <h5>{{ghost.date}}</h5>
+        <h5>{{ghost.time}}</h5>
 
 
         <div ng-controller="CollapseDemoCtrl">
@@ -51,16 +51,10 @@
                         
                     </div>
 
-
-
-
-
-
-
-    </div>
-  </div>
-</div>    
-
+                </div>
+            </div>
+        </div>    
+</div>
 
 
 

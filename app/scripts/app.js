@@ -8,7 +8,8 @@ angular.module('finalProjectApp', [
   'firebase',
   'angularfire.firebase',
   'angularfire.login',
-  'simpleLoginTools'
+  'simpleLoginTools',
+  'ui.bootstrap'
 ])
   .config(function ($routeProvider) {
     $routeProvider
