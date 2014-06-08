@@ -39,7 +39,7 @@
 <h3>Create a New Ghost Experience</h3>
 <div class="row">
 		<div>
-				<form role="form" novalidate ng-submit="addPost()">
+				<form class="form-inline" role="form" novalidate ng-submit="addPost()">
 					<div class="photoUpload">
 							<p>Upload a photo</p>
 							<input type="file" ng-model="ghost.photo">
@@ -51,7 +51,7 @@
 						</div>
 						<div class="inputs">
 							<p>When did this happen?</p>
-							<input type="text" placeholder="add apprx time" ng-model="ghost.time">
+							<input type="number" placeholder="add apprx time" ng-model="ghost.time">
 						</div>
 						<div class="inputs">
 							<p>How many people witnessed this?</p>
