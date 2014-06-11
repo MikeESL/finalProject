@@ -16,13 +16,9 @@
                 <li><a ng-href="#">Home</a></li>
                 <li><a ng-href="#/create">Create a Story</a></li>
                 <li class="active"><a ng-href="#/list">View Stories</a></li>
-                <li><a ng-href="#">About</a></li>
+                <li><a ng-href="#/search">Search for Stories</a></li>
+                <li><a ng-href="#/about">About</a></li>
             </ul>
-            <form role="search" class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" placeholder="Search by City Name" class="form-control">
-                </div>
-            </form>
             <ul class="nav navbar-nav navbar-right">
                 <li ng-cloak ng-show-auth="login" ng-controller="LoginController"><a ng-href="#" ng-click="logout()">Log Out</a></li>
     <li ng-cloak ng-show-auth="['logout','error']"><a ng-href="#/login">Log In</a></li>
@@ -35,7 +31,7 @@
 <div ng-repeat="(index, ghost) in ghosts">
 
         <h4>{{ghost.date | date}}</h4> 
-        <img ng-src="{{ghost.photo}}"></img>
+        <imgng-src="{{ghost.photo}}"></img>
         <h6>{{ghost.location | uppercase}}</h6>
 
 

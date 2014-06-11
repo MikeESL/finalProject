@@ -18,17 +18,13 @@
                 <li><a ng-href="#/">Home</a></li>
                 <li class="active"><a ng-href="#/create">Create a Story</a></li>
                 <li><a ng-href="#/list">View Stories</a></li>
-                <li><a ng-href="#">About</a></li>
+                <li><a ng-href="#/search">Search</a></li>
+                <li><a ng-href="#/about">About</a></li>
             </ul>
             <ul class="nav navbar-nav">
                 <li ng-cloak ng-show-auth="login" ng-controller="LoginController"><a href="#" ng-click="logout()">Log Out</a></li>
                 <li ng-cloak ng-show-auth="['logout','error']"><a href="#/login">Log In</a></li>
             </ul>
-            <form role="search" class="navbar-form navbar-right">
-                <div class="form-group">
-                    <input type="text" placeholder="Search by City Name" class="form-control">
-                </div>
-            </form>
             
         </div>
     </nav>
@@ -43,11 +39,14 @@
 		<div>
 
 				<form class="form-inline" role="form" novalidate ng-submit="addPost()">
-				  <div class="form-group">	
-					<div class="photoUpload">
-							<p>Upload a photo</p>
-							<input class="form-control" type="file" ng-model="newPost.photo">
-					</div>
+				  <div class="form-group">
+				   <form>	
+						<div id="photoUpload">
+								<p>Upload a photo</p>
+								<input class="form-control" type="file" accept="image/*" id="file-upload" ng-model="newPost.photo">
+								<button type="submit" id="#submit-photo">Submit Your Photo</button>
+						</div>
+					</form>
 					<div class="allInputs">
 						<div class="inputs">
 							<p>Where did this happen?</p>
