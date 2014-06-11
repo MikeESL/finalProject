@@ -1,7 +1,29 @@
+// -------- custom directive for AJAX call to Parse.com --//
+angular.module('finalProjectApp')
+      .directive('myDirective', function(){
+          
+      })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -------- standard directives ---------------------- //
+// collapsable view more directive ----------//
 function CollapseDemoCtrl($scope) {
   $scope.isCollapsed = true;
 };
-
+//-------- DatePicker directive ------//
 var DatepickerDemoCtrl = function ($scope) {
   $scope.today = function() {
     $scope.newPost.date = new Date();
