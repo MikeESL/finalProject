@@ -1,8 +1,10 @@
 // -------- custom directive for AJAX call to Parse.com --//
-angular.module('finalProjectApp')
-      .directive('myDirective', function(){
-          
-      })
+// angular.module('finalProjectApp')
+//       .directive('myDirective', function(){
+
+//       })
+
+      
 
 
 
