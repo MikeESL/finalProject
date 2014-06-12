@@ -1,5 +1,5 @@
 // -------- custom directive for AJAX call to Parse.com --//
-angular.module('customUploadDirective')
+angular.module('finalProjectApp')
       .directive('myDirective', function(){
             return{
               templateUrl: 'views/directiveDemo.html',

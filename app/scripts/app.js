@@ -9,8 +9,8 @@ angular.module('finalProjectApp', [
   'angularfire.firebase',
   'angularfire.login',
   'simpleLoginTools',
-  'ui.bootstrap',
-  'customUploadDirective'
+  'ui.bootstrap'
+ // 'customUploadDirective.directives'
 ])
   .config(function ($routeProvider) {
     $routeProvider
