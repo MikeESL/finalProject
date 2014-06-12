@@ -10,6 +10,7 @@ angular.module('finalProjectApp', [
   'angularfire.login',
   'simpleLoginTools',
   'ui.bootstrap',
+  'customUploadDirective'
 ])
   .config(function ($routeProvider) {
     $routeProvider
