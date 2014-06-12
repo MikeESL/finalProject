@@ -28,7 +28,7 @@ angular.module('finalProjectApp')
                           success: function(data){
                              console.log("File available at:" + data.url);
                             scope.$apply(function() {
-                              scope.photo = data.url;
+                              scope.newPost.photo = data.url;
                             })
                           },
                           error: function(data){

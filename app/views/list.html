@@ -30,9 +30,10 @@
 <!-- begin listing of ghost posts -->
 <div ng-repeat="(index, ghost) in ghosts">
 
-        <h4>{{ghost.date | date}}</h4> 
-        <img ng-src="{{ghost.photo}}"></img>
+        <h4>{{ghost.date | date}}</h4>
+        <img ng-src="{{ghost.photo}}">
         <h6>{{ghost.location | uppercase}}</h6>
+        <div class="inner"></div>
 
 
         <div ng-controller="CollapseDemoCtrl">
