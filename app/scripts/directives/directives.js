@@ -2,6 +2,7 @@
 angular.module('finalProjectApp')
       .directive('myDirective', function(){
             return{
+              restrict: 'E',
               templateUrl: 'views/directiveDemo.html',
               link: function(){
                   var file;
