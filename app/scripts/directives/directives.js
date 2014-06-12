@@ -30,12 +30,13 @@ angular.module('customUploadDirective')
                             var obj = jQuery.parseJSON(data);
                             console.log('faaaaaaail!!!!');
                           }
-                        }
+
+                        })
                     })
-                  })
+                  }
               }
-            }
-      })
+            });
+  
 
 
 
