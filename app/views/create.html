@@ -38,11 +38,14 @@
 <div class="row">
 		<div>
 
-				<form class="form-inline" role="form" novalidate ng-submit="addPost()">
-				  <div class="form-group">
-				   	
-						
-							<my-directive></my-directive>
+			
+
+				<form class="form-inline" role="form" novalidate ng-submit="addPost(newPost)">
+				  
+				  	<my-directive></my-directive>
+				   	<!-- <input type="hidden" ng-model="newPost.photo" ng-value="{{photo}}"> -->
+				
+							
 								<!-- <p>Upload a photo</p>
 								<input class="form-control" type="file" accept="image/*" id="file-upload" ng-model="newPost.photo"> -->
 								<!-- <button type="submit" id="#submit-photo">Submit Your Photo</button> -->
@@ -77,7 +80,7 @@
 						</div>
 							
 					</div>
-				  </div>	
+				  	
 				  <div class="inputs">
 							<button type="submit">Submit Your Experience</button>
 					</div>

@@ -3,8 +3,9 @@ angular.module('finalProjectApp')
       .directive('myDirective', function(){
             return{
               restrict: 'E',
+              
               templateUrl: 'views/directiveDemo.html',
-              link: function(){
+              link: function(scope, element, attrs){
                   var file;
                   $('#fileupload').bind("change", function(element){
                     var files = element.target.files || element.dataTransfer.files;
@@ -26,6 +27,9 @@ angular.module('finalProjectApp')
                           contentType: false,
                           success: function(data){
                              console.log("File available at:" + data.url);
+                            scope.$apply(function() {
+                              scope.photo = data.url;
+                            })
                           },
                           error: function(data){
                             var obj = jQuery.parseJSON(data);
@@ -38,18 +42,6 @@ angular.module('finalProjectApp')
               }
             });
   
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
