@@ -6,7 +6,7 @@ angular.module('finalProjectApp')
               templateUrl: 'views/directiveDemo.html',
               link: function(){
                   var file;
-                  $('#fileselect').bind("change", function(element){
+                  $('#fileupload').bind("change", function(element){
                     var files = element.target.files || element.dataTransfer.files;
                     file = files [0];
                     console.log('file is:', file);
