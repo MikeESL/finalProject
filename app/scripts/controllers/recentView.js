@@ -1,4 +1,4 @@
-angular.model('finalProjectApp')
+angular.module('finalProjectApp')
 .controller('RecentCtrl', function($scope, $http) {
     $http.get('ghost.json').then(
       function(ghost){
