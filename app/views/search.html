@@ -29,27 +29,28 @@
 <!-- end nav / search -->
 <!-- begin listing of ghost posts -->
 <h1>Search by City</h1>
-<input type="text" ng-model="search.location">
+<input type="text" ng-model="search.city">
 <div ng-repeat="(index, ghost) in ghosts | orderByPriority | filter:search">
-
-        <h4>{{ghost.date | date}}</h4> 
-        <img ng-src="{{ghost.photo}}"></img>
+        <h3>{{ghost.title | uppercase}}</h3>
+        <h4>{{ghost.date | date}}</h4>
+        <h4>{{ghost.city | uppercase}}</h4>
         <h6>{{ghost.location | uppercase}}</h6>
+        
 
 
         <div ng-controller="CollapseDemoCtrl">
-             <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">View More!</button>
+             <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">View More / Less</button>
              <hr>
              <div collapse="isCollapsed">
                <div class="well well-lg">
                     <div>
-                        <h5>{{ghost.number}}</h5>
-                        <h5>{{ghost.scared}}</h5>
-                        <h5>{{ghost.description}}</h5>
+                        <img ng-src="{{ghost.photo}}">
+                      <h5>Number of people who witnessed this:<span>{{ghost.number}}</span></h5>
+                        <h5>Description of anything physically experienced:<span><h5>{{ghost.physical}}</span></h5>
+                        <h5>Overall description of experience:<span><h5>{{ghost.physical}}</span></h5>
                         
                     </div>
-
+                   </div> 
                 </div>
             </div>
-        </div>    
 </div>
