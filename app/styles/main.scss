@@ -96,10 +96,25 @@ body{
 .almostjumbotron{
     background: url(/images/ghostTracker.jpg);
     background-size: 100% auto;
-    // background-repeat: no-repeat;
+    background-repeat: no-repeat;
     width: 100%;
     min-height: 400px;
     text-align: center;
+}
+.almostjumbotron h1{
+    font-family: 'IM Fell DW Pica', serif;
+    color: #fff;
+    line-spacing: 1em;
+    font-size: 5em;
+    padding:40px;
+
+}
+.almostjumbotron p{
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 .tronButtons{
@@ -107,7 +122,8 @@ body{
     
 }
 .almostjumbotron li{
-    display: inline;
+    display: inline-block;
+    margin: 10px;
 }
 
 
