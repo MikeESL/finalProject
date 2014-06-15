@@ -93,6 +93,23 @@ body {
 body{
     background: #000;
 }
+.almostjumbotron{
+    background: url(/images/ghostTracker.jpg);
+    background-size: 100% auto;
+    // background-repeat: no-repeat;
+    width: 100%;
+    min-height: 400px;
+    text-align: center;
+}
+
+.tronButtons{
+    list-style: none;
+    
+}
+.almostjumbotron li{
+    display: inline;
+}
+
 
 .container{
     min-width: 100%;
