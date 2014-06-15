@@ -1,11 +1,22 @@
+
+
 angular.module('finalProjectApp')
-.controller('RecentCtrl', function($scope, $http) {
-    $http.get('ghost.json').then(
-      function(ghost){
-        $scope.ghost = ghost.data;
+.filter('reverse', function() {
+      function toArray(list) {
+         var k, out = [];
+         if( list ) {
+            if( angular.isArray(list) ) {
+               out = list;
+            }
+            else if( typeof(list) === 'object' ) {
+               for (k in list) {
+                  if (list.hasOwnProperty(k)) { out.push(list[k]); }
+               }
+            }
+         }
+         return out;
       }
-    );
-    $scope.orderProp = 'age';
-    $scope.quantity = 3;
-  }
-);
+      return function(items) {
+         return toArray(items).slice().reverse();
+      };
+   });

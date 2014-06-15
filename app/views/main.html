@@ -47,11 +47,11 @@
 
 <div class="row marketing" ng-controller="GhostCtrl">
   <h2>Recent Posts</h2>
-<div class="col-md-4" ng-controller="RecentCtrl" ng-repeat="(index, ghost) in ghosts | filter:query | limitTo:3 | orderBy:orderProp">
+<div class="col-md-4" ng-repeat="(index, ghost) in ghosts | orderByPriority | reverse | limitTo: 3">
         <h3>{{ghost.title | uppercase}}</h3>
         <h4>{{ghost.date | date}}</h4>
         <h4>{{ghost.city | uppercase}}</h4>
-        <h6>{{ghost.location | uppercase}}</h6>
+        <h5>{{ghost.location | uppercase}}</h5>
         <img ng-src="{{ghost.photo}}">
         
 
@@ -71,8 +71,8 @@
                    </div> 
                 </div>
             </div>
-
+</div>
 
 <div class="footer">
-  <p>♥ from the Yeoman team</p>
+  <p>Thank you for using ghostTracker!</p>
 </div>
