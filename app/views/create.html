@@ -36,7 +36,7 @@
 	<h1>Create a New Ghost Experience</h1>
 	<p>There are eight parts to creating your personal ghost experience. You may not have an answer to all 8, and that's ok! But take some time and think about what happened to you, and then fill in the following:
 </div>
-<div class="row">
+<div class="row createRow">
 		<div>
 
 			
@@ -63,7 +63,7 @@
 						<p class="input-group">
 						<input placeholder="add date" type="text" class="form-control" datepicker-popup="shortDate" ng-model="newPost.date" is-open="opened" min-date="1900-01-01" max-date="'2015-06-22'" datepicker-options="dateOptions"  close-text="Close" />
 			              <span class="input-group-btn">
-			                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+			                <button type="button" class="btn btn-default calbutton" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
 			              </span>
 			            </p>
 						
@@ -71,10 +71,10 @@
 					
 					
 
-
+					<div class="inputs">
 						<my-directive></my-directive>
-				   	<input type="hidden" ng-model="newPost.photo" ng-value="{{photo}}">
-
+				   		<!-- <input type="hidden" ng-model="newPost.photo" ng-value="{{photo}}"> -->
+					</div>
 
 
 

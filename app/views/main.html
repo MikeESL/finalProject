@@ -45,34 +45,37 @@
   <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
 </div>
 
-<div class="row marketing" ng-controller="GhostCtrl">
-  <h2>Recent Posts</h2>
-<div class="col-md-4" ng-repeat="(index, ghost) in ghosts | orderByPriority | reverse | limitTo: 3">
-        <h3>{{ghost.title | uppercase}}</h3>
-        <h4>{{ghost.date | date}}</h4>
-        <h4>{{ghost.city | uppercase}}</h4>
-        <h5>{{ghost.location | uppercase}}</h5>
-        <img ng-src="{{ghost.photo}}">
-        
+<div ng-controller="GhostCtrl">
+    <div class="mainheadline">
+      <h2>Recent Posts</h2>
+    </div>
+    <div class="col-md-4 recentPosts" ng-repeat="(index, ghost) in ghosts | orderByPriority | reverse | limitTo: 3">
+            <h3>{{ghost.title | uppercase}}</h3>
+            <h4>{{ghost.date | date}}</h4>
+            <h4>{{ghost.city | uppercase}}</h4>
+            <h5>{{ghost.location | uppercase}}</h5>
+            <img ng-src="{{ghost.photo}}">
+            
 
 
-        <div ng-controller="CollapseDemoCtrl">
-             <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">View More / Less</button>
-             <hr>
-             <div collapse="isCollapsed">
-               <div class="well well-lg">
-                    <div>
+            <div ng-controller="CollapseDemoCtrl">
+                 <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">View More / Less</button>
+                 <hr>
+                 <div collapse="isCollapsed">
+                   <div class="well well-lg">
+                        <div>
+                            
+                          <h5>Number of people who witnessed this:<span>{{ghost.number}}</span></h5>
+                            <h5>Description of anything physically experienced:<span><h5>{{ghost.physical}}</span></h5>
+                            <h5>Overall description of experience:<span><h5>{{ghost.physical}}</span></h5>
+                            
                         
-                      <h5>Number of people who witnessed this:<span>{{ghost.number}}</span></h5>
-                        <h5>Description of anything physically experienced:<span><h5>{{ghost.physical}}</span></h5>
-                        <h5>Overall description of experience:<span><h5>{{ghost.physical}}</span></h5>
-                        
-                    </div>
-                   </div> 
+                        </div> 
+                  </div>
                 </div>
-            </div>
+          </div>
+    </div>
 </div>
-
 <div class="footer">
   <p>Thank you for using ghostTracker!</p>
 </div>

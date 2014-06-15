@@ -93,8 +93,17 @@ body {
 body{
     background: #000;
 }
+
 .container{
     min-width: 100%;
+}
+.mainheadline{
+    text-align: center;
+    
+}
+.recentPosts img{
+    width: 200px;
+    height: 180px;
 }
 .headline{
     width: 40%;
@@ -106,12 +115,18 @@ body{
     margin-left: 25px;
 }
 .inputs{
-    margin-bottom: 25px;
-    margin-left: 30px;
+    margin-bottom: 35px;
+    // margin-left: 30px;
 }
-.marketing h2{
+.marketing{
     letter-spacing: 0.8px;
+    margin: 0 auto;
 }
+.createRow{
+    width: 40%;
+    margin: 0 auto;
+}
+
 
 
 
