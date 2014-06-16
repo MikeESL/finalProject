@@ -89,9 +89,18 @@ body {
         border-bottom: 0;
     }
 }
+
+
 /* my styles ------- */
 body{
     background: #000;
+}
+.navbar{
+    font-family: 'Open Sans', sans-serif;
+
+}
+.navbar-inverse{
+    background-color:#0F1324;
 }
 .almostjumbotron{
     background: url(/images/ghostTracker.jpg);
@@ -100,6 +109,8 @@ body{
     width: 100%;
     min-height: 400px;
     text-align: center;
+    padding-top: 2%;
+    padding-bottom: 5%;
 }
 .almostjumbotron h1{
     font-family: 'IM Fell DW Pica', serif;
@@ -121,6 +132,10 @@ body{
     list-style: none;
     
 }
+.btn-lg{
+    font-size: 0.9em;
+    color: #fff;
+}
 .almostjumbotron li{
     display: inline-block;
     margin: 10px;
@@ -134,9 +149,23 @@ body{
     text-align: center;
     
 }
+.mainheadline h2{
+    color: #fff;
+    font-size: 3.0em;
+    letter-spacing: 0.9px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.recentPosts  h3, h4, h5{
+    color: #fff;
+   font-family: 'Open Sans', sans-serif;
+}
+
 .recentPosts img{
-    width: 200px;
-    height: 180px;
+    width: 100%;
+    max-height: 50%;
+    min-height: 50%;
+    margin-bottom: 10px;
 }
 .headline{
     width: 40%;
@@ -152,12 +181,14 @@ body{
     // margin-left: 30px;
 }
 .marketing{
-    letter-spacing: 0.8px;
     margin: 0 auto;
 }
 .createRow{
     width: 40%;
     margin: 0 auto;
+}
+.well{
+    background-color: #0F1324;
 }
 
 
