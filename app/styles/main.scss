@@ -92,8 +92,15 @@ body {
 
 
 /* my styles ------- */
-body{
-    background: #000;
+
+body {
+  background: #000;  
+  padding-top: 30px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
 }
 .navbar{
     font-family: 'Open Sans', sans-serif;
@@ -117,7 +124,7 @@ body{
     color: #fff;
     line-spacing: 1em;
     font-size: 5em;
-    padding:40px;
+    padding:28px;
 
 }
 .almostjumbotron p{
@@ -132,9 +139,12 @@ body{
     list-style: none;
     
 }
+
 .btn-lg{
     font-size: 0.9em;
     color: #fff;
+
+
 }
 .almostjumbotron li{
     display: inline-block;
@@ -153,6 +163,13 @@ body{
     color: #fff;
     font-size: 3.0em;
     letter-spacing: 0.9px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.mainheadline h3{
+    color: #fff;
+    font-size: 2.5em;
+    letter-spacing: 0.7px;
     font-family: 'Open Sans', sans-serif;
 
 }
@@ -184,7 +201,7 @@ body{
     margin: 0 auto;
 }
 .createRow{
-    width: 40%;
+    width: 90%;
     margin: 0 auto;
 }
 .well{
@@ -192,9 +209,46 @@ body{
 }
 
 .footer{
-    clear: all;
+    float: left;
 }
-
+/* login view styling */
+legend{
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+label{
+    color: #fff;
+    letter-spacing: 0.1em;
+    font-family: 'Open Sans', sans-serif;
+}
+.btn-primary {
+background-color: #1f293d;
+border-color: #181d30;
+}
+.btn-default {
+color: #000;
+background-color: #67686d;
+border-color: #67686d;
+}
+/*create view styling */
+.inputs h3, p{
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+.instructions p{
+    margin: auto 0;
+    width: 95%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 1.4em;
+    color: #67696D;
+}
+/* list view stlying */
+.well img{
+    width: 60%;
+    min-height: 40%;
+}
 
 
 

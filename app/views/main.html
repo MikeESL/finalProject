@@ -18,10 +18,10 @@
                 <li><a ng-href="#/create">Create a Story</a></li>
                 <li><a ng-href="#/list">View Stories</a></li>
                 <li><a ng-href="#/search">Search for Stories</a></li>
-                <li><a ng-href="#/about">About</a></li>
+                <!-- <li><a ng-href="#/about">About</a></li> -->
 
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav">
                 <li ng-cloak ng-show-auth="login" ng-controller="LoginController"><a ng-href="#" ng-click="logout()">Log Out</a></li>
                 <li ng-cloak ng-show-auth="['logout','error']"><a ng-href="#/login">Log In</a></li>
             </ul>
@@ -52,6 +52,7 @@
 <div ng-controller="GhostCtrl">
     <div class="mainheadline">
       <h2>Recent Haunts</h2>
+      <hr>
     </div>
     <div class="col-md-4 recentPosts" ng-repeat="(index, ghost) in ghosts | orderByPriority | reverse | limitTo: 3">
             <h3>{{ghost.title | uppercase}}</h3>
@@ -71,17 +72,18 @@
                             
                           <h5>Number of people who witnessed this:<span>{{ghost.number}}</span></h5>
                             <h5>Description of anything physically experienced:<span><h5>{{ghost.physical}}</span></h5>
-                            <h5>Overall description of experience:<span><h5>{{ghost.physical}}</span></h5>
+                            <h5>Overall description of experience:<span><h5>{{ghost.description}}</span></h5>
                             
                         
                         </div> 
                   </div>
                 </div>
+                <hr>
           </div>
     </div>
 </div>
-<div class="clearspace">
-</div> 
-<div class="footer">
-  <p>Thank you for using ghostTracker!</p>
-</div>
+<!-- <br>
+<hr>
+<footer>
+  Thank you for using ghostTracker
+</footer> -->

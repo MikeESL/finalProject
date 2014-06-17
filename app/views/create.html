@@ -1,7 +1,7 @@
-<!-- begin navigation with search bar  -->
+<!-- begin navigation -->
 
 <div class="container">
-    <nav role="navigation" class="navbar navbar-inverse">
+    <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#" class="navbar-brand" "text-muted">ghostTracker 1.0</a>
+            <a href="#" class="navbar-brand" "text-muted">ghostTracker</a>
         </div>
         <!-- Collection of nav links, forms, and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
@@ -18,8 +18,8 @@
                 <li><a ng-href="#/">Home</a></li>
                 <li class="active"><a ng-href="#/create">Create a Story</a></li>
                 <li><a ng-href="#/list">View Stories</a></li>
-                <li><a ng-href="#/search">Search</a></li>
-                <li><a ng-href="#/about">About</a></li>
+                <li><a ng-href="#/search">Search for Stories</a></li>
+                <!-- <li><a ng-href="#/about">About</a></li> -->
             </ul>
             <ul class="nav navbar-nav">
                 <li ng-cloak ng-show-auth="login" ng-controller="LoginController"><a href="#" ng-click="logout()">Log Out</a></li>
@@ -30,51 +30,68 @@
     </nav>
 </div>
 
-<!-- end navigation with search bar  -->
+<!-- end navigation  -->
+
+<div class="almostjumbotron">
+    <h1>ghostTracker</h1>
+    <p class="lead">
+      
+      Share your spectral experience.
+    </p>
+    <ul class="tronButtons">
+
+         <li> <p><a class="btn btn-lg" ng-href="#search">Search</a></p></li>
+         <li> <p><a class="btn btn-lg" ng-href="#create">Create</a></p></li>
+    </ul>
+</div>
+
 <!-- begin inputs to create experience/post -->
-<div class="headline">
-	<h1>Create a New Ghost Experience</h1>
-	<p>There are eight parts to creating your personal ghost experience. You may not have an answer to all 8, and that's ok! But take some time and think about what happened to you, and then fill in the following:
+<div class="mainheadline">
+      <h3>Create Your Ghost Story</h3>
+		<div class="instructions">
+           <p>There are eight parts to creating your ghost story! Don't worry, it's painless. By breaking your story up into eight parts, we hope to be sure all possible information is included. Take your time, be creative, and even look at other posts before you begin. Thanks for using ghostTracker! Have fun!</p>
+        </div>   	
+      <hr>
 </div>
 <div class="row createRow">
 		<div>
 
 			
 
-				<form class="form-inline" role="form" novalidate ng-submit="addPost(newPost)">
+				<form class="form-inline" role="form" name="createGhost" novalidate ng-submit="addPost(newPost)" >
+					<div class="col-lg-6">
+						<div class="inputs">
+							<h3>1.<span><p>Please title your eperience (be creative!)</p></span></h3>
+							<input class="form-control" maxlength="32" type="text" placeholder="Create a title" name="title" ng-model="newPost.title" ng-required="true" required>
+						</div>
+					  
+					  	<div class="inputs">
+							<h3>2.<span><p>In what city or town did this take place?</p></span></h3>
+							<input class="form-control" type="text" placeholder="Add city" ng-model="newPost.city">
+						</div>
 
-					<div class="inputs">
-						<h3>1.<span><p>Please title your eperience (be creative!)</p></span></h3>
-						<input class="form-control" type="text" placeholder="Create a title" ng-model="newPost.title">
-					</div>
-				  
-				  	<div class="inputs">
-						<h3>2.<span><p>In what city or town did this take place?</p></span></h3>
-						<input class="form-control" type="text" placeholder="Add city" ng-model="newPost.city">
-					</div>
+						<div class="inputs">
+							<h3>3.<span><p>Where in the the city did this happen (specific location, building, address, etc)?</p></span></h3>
+							<input class="form-control" type="text" placeholder="Specific location" ng-model="newPost.location">
+						</div>
 
-					<div class="inputs">
-						<h3>3.<span><p>Where in the the city did this happen (specific location, building, address, etc)?</p></span></h3>
-						<input class="form-control" type="text" placeholder="Specific location" ng-model="newPost.location">
+						<div class="inputs" ng-controller="DatepickerDemoCtrl">
+							<h3>4.<span><p>Date of your experience?</p></span></h3>
+							<p class="input-group">
+							<input placeholder="add date" type="text" class="form-control" datepicker-popup="shortDate" ng-model="newPost.date" is-open="opened" min-date="1900-01-01" max-date="'2015-06-22'" datepicker-options="dateOptions"  close-text="Close"/>
+				              <span class="input-group-btn">
+				                <button type="button" class="btn btn-default calbutton" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+				              </span>
+				            </p>
+							
+						</div>				  	
 					</div>
-
-					<div class="inputs" ng-controller="DatepickerDemoCtrl">
-						<h3>4.<span><p>Date of your experience?</p></span></h3>
-						<p class="input-group">
-						<input placeholder="add date" type="text" class="form-control" datepicker-popup="shortDate" ng-model="newPost.date" is-open="opened" min-date="1900-01-01" max-date="'2015-06-22'" datepicker-options="dateOptions"  close-text="Close" />
-			              <span class="input-group-btn">
-			                <button type="button" class="btn btn-default calbutton" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-			              </span>
-			            </p>
-						
-					</div>				  	
 					
-					
-
-					<div class="inputs">
-						<my-directive></my-directive>
-				   		<!-- <input type="hidden" ng-model="newPost.photo" ng-value="{{photo}}"> -->
-					</div>
+					<div class="col-lg-6">
+						<div class="inputs">
+							<my-directive></my-directive>
+					   		<!-- <input type="hidden" ng-model="newPost.photo" ng-value="{{photo}}"> -->
+						</div>
 
 
 
@@ -93,7 +110,7 @@
 							<h3>8.<span><p>Add a brief overall description of what happened (limited to 350 characters)</p></span></h3>
 							<textarea class="form-control" placeholder="Brief description" maxlength="350"cols="35" rows="2" ng-model="newPost.description"></textarea>
 						</div>
-							
+					</div>		
 					
 				  	
 				  <div class="inputs">
