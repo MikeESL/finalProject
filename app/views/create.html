@@ -61,22 +61,22 @@
 				<form class="form-inline" role="form" name="createGhost" novalidate ng-submit="addPost(newPost)" >
 					<div class="col-lg-6">
 						<div class="inputs">
-							<h3>1.<span><p>Please title your eperience (be creative!)</p></span></h3>
+							<h3>1. Please title your experience (<em>be creative, what did you see, etc</em>)</h3>
 							<input class="form-control" maxlength="32" type="text" placeholder="Create a title" name="title" ng-model="newPost.title" ng-required="true" required>
 						</div>
 					  
 					  	<div class="inputs">
-							<h3>2.<span><p>In what city or town did this take place?</p></span></h3>
+							<h3>2. In what city or town did this take place?</h3>
 							<input class="form-control" type="text" placeholder="Add city" ng-model="newPost.city">
 						</div>
 
 						<div class="inputs">
-							<h3>3.<span><p>Where in the the city did this happen (specific location, building, address, etc)?</p></span></h3>
+							<h3>3. Where in the the city did this happen (<em>specific location, building, address, etc</em>)?</h3>
 							<input class="form-control" type="text" placeholder="Specific location" ng-model="newPost.location">
 						</div>
 
 						<div class="inputs" ng-controller="DatepickerDemoCtrl">
-							<h3>4.<span><p>Date of your experience?</p></span></h3>
+							<h3>4. Date of your experience?</h3>
 							<p class="input-group">
 							<input placeholder="add date" type="text" class="form-control" datepicker-popup="shortDate" ng-model="newPost.date" is-open="opened" min-date="1900-01-01" max-date="'2015-06-22'" datepicker-options="dateOptions"  close-text="Close"/>
 				              <span class="input-group-btn">
@@ -97,23 +97,23 @@
 
 						
 						<div class="inputs">
-							<h3>6.<span><p>How many people experienced or witnessed this event?</p></span></h3>
+							<h3>6. How many people witnessed this event?</h3>
 							<input class="form-control"type="number" placeholder="just you (1), or others?" ng-model="newPost.number">
 						</div>
 
 						<div class="inputs">
-							<h3>7.<span><p>Did you physically feel anything (drop in temperature, did something touch you, etc)? Please briefly describe (limited to 150 characters)</p></span></h3>
-							<textarea class="form-control" placeholder="Did you feel anything?" maxlength="150"cols="35" rows="2" ng-model="newPost.physical"></textarea>
+							<h3>7. Did you physically feel anything (<em>drop in temperature, did something touch you, etc</em>)?</h3>
+							<textarea class="form-control" placeholder="Did you feel anything? (150 character limit)" maxlength="150"cols="35" rows="1" ng-model="newPost.physical"></textarea>
 						</div>
 						
 						<div class="inputs">
-							<h3>8.<span><p>Add a brief overall description of what happened (limited to 350 characters)</p></span></h3>
-							<textarea class="form-control" placeholder="Brief description" maxlength="350"cols="35" rows="2" ng-model="newPost.description"></textarea>
+							<h3>8. Add a brief overall description.</h3>
+							<textarea class="form-control" placeholder="Brief description (500 character limit)" maxlength="500"cols="35" rows="1" ng-model="newPost.description"></textarea>
 						</div>
 					</div>		
 					
 				  	
-				  <div class="inputs">
+				  <div class="inputs pull-right">
 							<button type="submit">Submit Your Experience</button>
 					</div>
 				</form>

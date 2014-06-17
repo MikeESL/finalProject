@@ -27,14 +27,31 @@
     </nav>
 </div>
 <!-- end nav / search -->
+<div class="almostjumbotron">
+    <h1>ghostTracker</h1>
+    <p class="lead">
+      
+      Share your spectral experience.
+    </p>
+    <ul class="tronButtons">
+
+         <li> <p><a class="btn btn-lg" ng-href="#search">Search</a></p></li>
+         <li> <p><a class="btn btn-lg" ng-href="#create">Create</a></p></li>
+    </ul>
+</div>
+<div class="mainheadline">
+        <h3>Search by City</h3>
+        <input type="text" ng-model="search.city">
+        <hr>
+</div>
+
 <!-- begin listing of ghost posts -->
-<h1>Search by City</h1>
-<input type="text" ng-model="search.city">
-<div ng-repeat="(index, ghost) in ghosts | orderByPriority | filter:search">
+
+<div class="listall" ng-repeat="(index, ghost) in ghosts | orderByPriority | filter:search">
         <h3>{{ghost.title | uppercase}}</h3>
         <h4>{{ghost.date | date}}</h4>
         <h4>{{ghost.city | uppercase}}</h4>
-        <h6>{{ghost.location | uppercase}}</h6>
+        <h5>{{ghost.location | uppercase}}</h5>
         
 
 

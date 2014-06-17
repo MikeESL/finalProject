@@ -43,12 +43,12 @@
 <div class="mainheadline">
       <h2>Ghost Stories</h2>
       <hr>
-    </div>
-<div ng-repeat="(index, ghost) in ghosts | reverse">
+</div>
+<div class="listall" ng-repeat="(index, ghost) in ghosts | reverse">
         <h3>{{ghost.title | uppercase}}</h3>
         <h4>{{ghost.date | date}}</h4>
         <h4>{{ghost.city | uppercase}}</h4>
-        <h6>{{ghost.location | uppercase}}</h6>
+        <h5>{{ghost.location | uppercase}}</h5>
         
 
 
@@ -61,9 +61,9 @@
                         <img ng-src="{{ghost.photo}}">
                 
                     
-                      <h5>Number of people who witnessed this:<span>{{ghost.number}}</span></h5>
-                        <h5>Description of anything physically experienced:<span><h5>{{ghost.physical}}</span></h5>
-                        <h5>Overall description of experience:<span><h5>{{ghost.physical}}</span></h5>
+                        <p class="describe">Number of people who witnessed this:</p><span class="answer"> {{ghost.number}}</span>
+                        <p class="describe">Description of anything physically experienced:</p><span class="answer"> {{ghost.physical}}</span>
+                        <p class="describe">Overall description of experience:</p><span class="answer">{{ghost.physical}}</span>
                        
                     
                    </div> 
