@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('finalProjectApp')
-  .controller('LoginController', function($scope, simpleLogin, $location) {
+  .controller('LoginController',['$scope', 'simpleLogin', '$location', function($scope, simpleLogin, $location) {
     $scope.pass = null;
     $scope.err = null;
     $scope.email = null;
@@ -66,4 +66,4 @@ angular.module('finalProjectApp')
       }
     };
 
-  });
+  }]);
