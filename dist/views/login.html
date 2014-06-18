@@ -1,0 +1,97 @@
+
+<div class="container">
+    <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">ghostTracker</a>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a ng-href="#">Home</a></li>
+                <li><a ng-href="#/create">Create a Story</a></li>
+                <li><a ng-href="#/list">View Stories</a></li>
+                <li><a ng-href="#/search">Search for Stories</a></li>
+
+            </ul>
+            <ul class="nav navbar-nav">
+                <li ng-cloak ng-show-auth="login" ng-controller="LoginController"><a ng-href="#" ng-click="logout()">Log Out</a></li>
+                <li ng-cloak ng-show-auth="['logout','error']"><a ng-href="#/login">Log In</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+</div>
+<div class="almostjumbotron">
+    <h1>ghostTracker</h1>
+    <p class="lead">
+      
+      Share your spectral experience.
+    </p>
+    <ul class="tronButtons">
+
+         <li> <p><a class="btn btn-lg" ng-href="#search">Search</a></p></li>
+         <li> <p><a class="btn btn-lg" ng-href="#create">Create</a></p></li>
+    </ul>
+    
+</div>
+<div class="mainheadline">
+      <h3>You Must Log-in or Register to Post a Story</h3>
+</div>
+
+
+
+<!-- wait for auth to resolve (avoid flashing login page before redirect -->
+<div ng-cloak class="row">
+    <div class="col-md-12">
+
+        <!-- examples for fun and profit -->
+        <!--<div ng-show-auth="login">{{auth.user|json}}</div>-->
+        <!--<div ng-show-auth="error,logout">Logged out</div>-->
+        <!--<div ng-show-auth="error">{{auth.error}}</div>-->
+       
+
+        
+        <p>&nbsp;</p>
+        <form role="form">
+            <fielset>
+                <legend>Email/Password</legend>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>email</label>
+                            <input class="form-control" type="text" ng-model="email" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>password</label>
+                            <input class="form-control" type="password" ng-model="pass" />
+                        </div>
+
+                        <div class="form-group" ng-show="createMode">
+                            <label>confirm pass</label>
+                            <input class="form-control" type="password" ng-model="confirm" />
+                        </div>
+
+                        <button class="btn btn-primary" ng-click="loginPassword()" ng-hide="createMode">Log In</button>
+                        <button class="btn btn-default" ng-click="createMode = true" ng-hide="createMode">Register</button>
+                        <button class="btn btn-success" ng-show="createMode" ng-click="createAccount()">Create Account</button>
+                        <button class="btn btn-default" ng-show="createMode" ng-click="createMode = false">Cancel</button>
+                    </div>
+                </div>
+            </fielset>
+        </form>
+        
+
+        <br />
+        <div ng-show="err" class="alert alert-danger"><strong>{{err}}</strong></div>
+
+    </div>
+</div>
