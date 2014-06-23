@@ -6,12 +6,12 @@ angular.module('finalProjectApp')
 				var getPosts = function(){
 							return ghostPosts;
 				};
-				var newPost = function(ghost){
+				var newPost = ['ghost', function(ghost){
 							ghostPosts.$add(ghost);
-				};
-				var removePost = function(id){
+				}];
+				var removePost = ['id', function(id){
 							ghostPosts.$remove(id);
-				};
+				}];
 //				var updatePost = function(id){
 //							ghostPosts.$update(id);
 //				};

@@ -56,7 +56,7 @@ angular.module('simpleLoginTools', [])
  *    <div ng-cloak-auth>Authentication has resolved.</div>
  * </code>
  */
-  .config( ['$provide',function($provide) {
+  .config(function($provide) {
     // adapt ng-cloak to wait for auth before it does its magic
     $provide.decorator('ngCloakDirective', ['$delegate', 'waitForAuth',function($delegate, waitForAuth) {
       var directive = $delegate[0];
@@ -71,7 +71,7 @@ angular.module('simpleLoginTools', [])
       // return the modified directive
       return $delegate;
     }]);
-  }])
+  })
 
 /**
  * A directive that shows elements only when the given authentication state is in effect
