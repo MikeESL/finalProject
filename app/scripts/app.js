@@ -11,7 +11,7 @@ angular.module('finalProjectApp', [
   'simpleLoginTools',
   'ui.bootstrap'
 ])
-  .config(function ($routeProvider) {
+  .config(['$routeProvider',function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -45,4 +45,4 @@ angular.module('finalProjectApp', [
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }]);
