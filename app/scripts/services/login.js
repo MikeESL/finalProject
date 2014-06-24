@@ -1,11 +1,11 @@
 'use strict';
 angular.module('angularfire.login', ['firebase', 'angularfire.firebase'])
 
-  .run(function(simpleLogin) {
+  .run(['simpleLogin',function(simpleLogin) {
     simpleLogin.init();
-  })
+  }])
 
-  .factory('simpleLogin', function($rootScope, $firebaseSimpleLogin, firebaseRef, profileCreator, $timeout) {
+  .factory('simpleLogin',['$rootScope', '$firebaseSimpleLogin', 'firebaseRef', 'profileCreator', '$timeout', function($rootScope, $firebaseSimpleLogin, firebaseRef, profileCreator, $timeout) {
     function assertAuth() {
       if( auth === null ) { throw new Error('Must call loginService.init() before using its methods'); }
     }
@@ -84,9 +84,9 @@ angular.module('angularfire.login', ['firebase', 'angularfire.firebase'])
 
       createProfile: profileCreator
     };
-  })
+  }])
 
-  .factory('profileCreator', function(firebaseRef, $timeout) {
+  .factory('profileCreator',['firebaseRef','$timeout', function(firebaseRef, $timeout) {
     return function(id, email, callback) {
       function firstPartOfEmail(email) {
         return ucfirst(email.substr(0, email.indexOf('@'))||'');
@@ -109,4 +109,4 @@ angular.module('angularfire.login', ['firebase', 'angularfire.firebase'])
       });
     };
 
-  });
+  }]);
