@@ -1,11 +1,11 @@
 (function (angular) {
   'use strict';
   angular.module('finalProjectApp')
-    .run(['$injector', '$location', '$rootScope', 'loginRedirectPath', function ($injector, $location, $rootScope, loginRedirectPath) {
+    .run(function ($injector, $location, $rootScope, loginRedirectPath) {
       if ($injector.has('$route')) {
         new RouteSecurityManager($location, $rootScope, $injector.get('$route'), loginRedirectPath);
       }
-    }]);
+    });
 
   function RouteSecurityManager($location, $rootScope, $route, path) {
     this._route = $route;
