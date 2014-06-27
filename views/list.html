@@ -44,7 +44,7 @@
       <h2>Ghost Stories</h2>
       <hr>
 </div>
-<div class="listall" ng-repeat="(index, ghost) in ghosts |orderByPriority | reverse">
+<div class="listall" ng-repeat="(index, ghost) in ghosts | reverse">
         <h3>{{ghost.title | uppercase}}</h3>
         <h4>{{ghost.date | date}}</h4>
         <h4>{{ghost.city | uppercase}}</h4>
